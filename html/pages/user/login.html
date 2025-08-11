@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Edugestio40</title>
+    <title>Login | Edugestio40</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../../static/css/base.css">
-    <link rel="stylesheet" href="../../../static/css/pages/login.css">
+    <link rel="stylesheet" href="../../../static/css/pages/user/login.css">
 </head>
-<body>
-    <h1>Login Edugestio40</h1>
+<body class="flex-center">
+    <main class="login" role="main">
+        
+        <!-- Bloque 1: Carrusel de imágenes -->
+        <section class="login__carousel" aria-label="Presentación de imágenes alusivas a la Institución">
+            <div class="login__logo" aria-label="Logo de Edugestio" role="img">
+                <img src="../../../static/media/pictures/svg/system-identity/edugestio40.svg" alt="Logo de Edugestio con birrete universitario">
+            </div>
+
+            <div class="carousel" role="region" aria-roledescription="carrusel" aria-live="polite" tabindex="0">
+                <div class="carousel__track">
+                    <!-- Cada slide -->
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 de 5">
+                        <img src="../../../static/media/pictures/images/login/image1.jpg" alt="Descripción de la imagen 1" class="carousel__image">
+                        <figcaption class="carousel__caption">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+    
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 de 5">
+                        <img src="../../../static/media/pictures/images/login/image2.jpg" alt="Descripción de la imagen 2" class="carousel__image">
+                        <figcaption class="carousel__caption">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+    
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 de 5">
+                        <img src="../../../static/media/pictures/images/login/image3.jpg" alt="Descripción de la imagen 3" class="carousel__image">
+                        <figcaption class="carousel__caption">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+    
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 de 5">
+                        <img src="../../../static/media/pictures/images/login/image4.jpg" alt="Descripción de la imagen 4" class="carousel__image">
+                        <figcaption class="carousel__caption">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 de 5">
+                        <img src="../../../static/media/pictures/images/login/image5.jpg" alt="Descripción de la imagen 5" class="carousel__image">
+                        <figcaption class="carousel__caption">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+                </div>
+
+                <!-- Indicadores de slide -->
+                <div class="carousel__indicators" role="tablist" aria-label="Selector de diapositivas"></div>
+            </div>
+        </section>
+
+        <!-- Bloque 2: Interacción del usuario -->
+        <section class="login__form" aria-label="Formulario de acceso y registro">
+            <h1>Bienvenido/a a Edugestio</h1>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../../../static/js/pages/login/login.js"></script>
+    <script src="../../../static/js/components/carousel/carousel.js"></script>
 </body>
 </html>

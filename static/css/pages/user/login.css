@@ -1,0 +1,162 @@
+body {
+    overflow: hidden;
+}
+
+.login {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    width: 100%;
+    height: 100svh;
+    padding: var(--spacing-md);
+
+    background-color: var(--color-background-default);
+    overflow-y: auto;
+
+    /* 🔹 Mejoras de rendimiento y compatibilidad en Safari / iOS */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    @media (width >= 768px) {
+        position: static;
+
+        width: 51.2rem;
+        height: 80rem;
+
+        border-radius: var(--radius-xlarge);
+    }
+
+    @media (width >= 1024px) {
+        flex-direction: row;
+
+        width: 84rem;
+        height: 54rem;
+    }
+
+    @media (width >= 1440px) {
+        
+    }
+}
+
+.login__carousel, .login__form {
+    border-radius: var(--radius-large);
+}
+
+.login__carousel {
+    position: relative;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 9.6rem);
+
+    text-align: center;
+    transition: transform 0.4s ease;
+
+    @media (width >= 768px) {
+
+    }
+
+    @media (width >= 1024px) {
+        flex: 0 0 372px;
+        height: 100%;
+    }
+
+    @media (width >= 1440px) {
+        
+    }
+}
+
+.login__logo {
+    position: absolute;
+    top: 2rem;
+    z-index: var(--z-index-dropdown);
+
+    img {
+        height: 3.6rem;
+
+        @media (width >= 768px) {
+            height: 4rem;
+        }
+    }
+}
+
+.login__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 8rem;
+    border: 1px solid var(--color-primary-base);
+
+    background-color: var(--color-primary-base);
+    text-align: center;
+
+    transition: all 0.4s ease;
+
+    h1 {
+        color: var(--color-background-default);
+        font-size: 2.4rem;
+        font-weight: bolder;
+    }
+
+    @media (width >= 768px) {
+        
+    }
+
+    @media (width >= 1024px) {
+        flex: 0 0 420px; 
+        height: 100%;
+    }
+
+    @media (width >= 1440px) {
+        
+    }
+}
+
+/* ===== Estados dinámicos controlados con JS ===== */
+
+/* Estado activo: formulario expandido */
+.login__form--active {
+    height: 48.4rem;
+    border-color: var(--color-primary-dark);
+
+    background-color: var(--color-background-default);
+
+    h1 {
+        color: var(--color-neutro-900);
+    }
+
+    @media (width >= 768px) {
+        height: 52.8rem;
+    }
+}
+
+/* Si no hay carrusel (pantallas bajas), se esconde */
+.login--no-carousel .login__carousel {
+    display: none;
+}
+
+.login--no-carousel .login__form {
+    height: 100%;
+}
+
+
+/* ===== Accesibilidad: animaciones reducidas ===== */
+@media (prefers-reduced-motion: reduce) {
+    .login__form {
+        transition: none;
+    }
+}
