@@ -1,0 +1,95 @@
+.checkbox {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    color: var(--color-neutral-700);
+    line-height: 1.4;
+    user-select: none;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox__label {
+    position: relative;
+    padding-left: 2.8rem;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--color-neutral-700);
+    transition: color var(--transition-duration-medium)
+        var(--transition-ease-default);
+}
+
+.checkbox__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-neutral-400);
+    border-radius: var(--radius-small);
+    background-color: var(--color-background-default);
+    transition: border-color var(--transition-duration-medium)
+            var(--transition-ease-default),
+        background-color var(--transition-duration-medium)
+            var(--transition-ease-default);
+}
+
+.checkbox__label::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0.75rem;
+    width: 0.7rem;
+    height: 1.2rem;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity var(--transition-duration-medium)
+        var(--transition-ease-default);
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+    background-color: var(--color-primary-base);
+    border-color: var(--color-primary-base);
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    border-right-color: white;
+    border-bottom-color: white;
+    opacity: 1;
+}
+
+.checkbox__input:focus-visible + .checkbox__label::before {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+.checkbox__link {
+    color: var(--color-primary-base);
+    text-decoration: underline;
+    transition: color var(--transition-duration-fast)
+        var(--transition-ease-default);
+}
+
+.checkbox__link:hover,
+.checkbox__link:focus {
+    color: var(--color-primary-dark);
+    outline: none;
+    text-decoration: none;
+}
+
+.checkbox__feedback {
+    display: block;
+    margin-top: var(--spacing-xs);
+    font-size: 1.2rem;
+    color: var(--color-state-danger-text);
+    min-height: 1.4rem;
+}

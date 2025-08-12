@@ -1,0 +1,18 @@
+.form {
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form--register {
+    gap: var(--spacing-md);
+
+    .form__row {
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+
+    .form__row > .input-field {
+        flex: 1;
+        min-width: 0;
+    }
+}
