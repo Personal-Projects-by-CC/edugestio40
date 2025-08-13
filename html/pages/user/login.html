@@ -53,109 +53,77 @@
         </section>
 
         <!-- Bloque 2: Interacción del usuario -->
-        <section class="login__form" aria-label="Formulario de registro">
+        
+        <!-- Formulario de iniciar sesión (login) -->
+        <section class="login__form" aria-label="Formulario de acceso">
+            <!-- Bloque logo -->
+            <div class="login__logo" aria-label="Logo de Edugestio" role="img">
+                <img src="../../../static/media/pictures/svg/system-identity/edugestio40-light.svg" alt="Logo de Edugestio con birrete universitario">
+            </div>
+
             <!-- Bloque encabezado -->
             <header class="login__header">
-                <h1 class="login__title">Únete a Edugestio</h1>
+                <h1 class="login__title">Bienvenido a Edugestio</h1>
+
+                <p class="login__description">
+                    Todo lo que necesitas para organizar tu vida académica en un solo lugar. 
+                    Inicia sesión para continuar aprendiendo, creciendo y cumpliendo tus metas.
+                </p>
             </header>
 
             <!-- Separador -->
             <div class="login__separator"></div>
 
             <!-- Molécula: formulario -->
-            <form action="#" class="form form--register" method="POST" novalidate>
-                <div class="form__row">
-                    <!-- Átomo: campo nombre de usuario -->
-                    <div class="input-field">
-                        <div class="input-field__wrapper">
-                            <input type="text" id="username" name="username" class="input-field__input" required autocomplete="username" placeholder=" " aria-describedby="username-feedback">
-                            <label for="username" class="input-field__label">Usuario</label>
-                        </div>
-                        <span id="username-feedback" class="input-field__feedback" aria-live="polite"></span>
-                    </div>
-    
-                    <!-- Átomo: Átomo: selector tipo de usuario (cambia input por select) -->
-                    <div class="input-field">
-                        <div class="input-field__wrapper">
-                            <label for="user-type" class="input-field__label">Tipo de usuario</label>
-                            <select id="user-type" name="user-type" class="input-field__input" required aria-describedby="user-type-feedback">
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="estudiante">Estudiante</option>
-                                <option value="profesor">Profesor</option>
-                                <option value="administrativo">Administrativo</option>
-                            </select>
-                        </div>
-                        <span id="user-type-feedback" class="input-field__feedback" aria-live="polite"></span>
-                    </div>
-                </div>
-
-                <!-- Átomo: campo CURP -->
+            <form action="#" class="form login__form-content" method="POST" novalidate>
+                <!-- Átomo: campo de texto -->
                 <div class="input-field">
                     <div class="input-field__wrapper">
-                        <input type="text" id="curp" name="curp" class="input-field__input" required autocomplete="off" placeholder=" " aria-describedby="curp-feedback" pattern="[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z0-9]{2}" title="Formato CURP: 4 letras, 6 dígitos fecha, H/M, 5 letras y 2 alfanuméricos">
-                        <label for="curp" class="input-field__label">CURP</label>
+                        <input type="text" id="username" name="username" class="input-field__input" required autocomplete="username" placeholder=" " aria-describedby="username-feedback">
+                        <label for="username" class="input-field__label">Usuario</label>
                     </div>
-                    <span id="curp-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    <span id="username-feedback" class="input-field__feedback" aria-live="polite"></span>
                 </div>
 
-                <!-- Átomo: campo correo electrónico -->
+                <!-- Átomo: campo de contraseña -->
                 <div class="input-field">
                     <div class="input-field__wrapper">
-                        <input type="email" id="email" name="email" class="input-field__input" required autocomplete="email" placeholder=" " aria-describedby="email-feedback">
-                        <label for="email" class="input-field__label">Correo electrónico</label>
+                        <input type="password" id="password" name="password" class="input-field__input" required autocomplete="current-password" placeholder=" " aria-describedby="password-feedback">
+                        <label for="password" class="input-field__label">Contraseña</label>
                     </div>
-                    <span id="email-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    <span id="password-feedback" class="input-field__feedback" aria-live="polite"></span>
                 </div>
 
-                <div class="form__row">
-                    <!-- Átomo: campo contraseña -->
-                    <div class="input-field">
-                        <div class="input-field__wrapper">
-                            <input type="password" id="password" name="password" class="input-field__input" required autocomplete="new-password" placeholder=" " aria-describedby="password-feedback">
-                            <label for="password" class="input-field__label">Contraseña</label>
-                        </div>
-                        <span id="password-feedback" class="input-field__feedback" aria-live="polite"></span>
-                    </div>
-    
-                    <!-- Átomo: campo repetir contraseña -->
-                    <div class="input-field">
-                        <div class="input-field__wrapper">
-                            <input type="password" id="password-repeat" name="password-repeat" class="input-field__input" required autocomplete="new-password" placeholder=" " aria-describedby="password-repeat-feedback">
-                            <label for="password-repeat" class="input-field__label">Repetir</label>
-                        </div>
-                        <span id="password-repeat-feedback" class="input-field__feedback" aria-live="polite"></span>
-                    </div>
-                </div>
-
-                <!-- Atomo: Avisos legales -->
-                <div class="checkbox">
-                    <input type="checkbox" id="accept-terms" name="accept-terms" class="checkbox__input" required aria-describedby="legal-feedback">
-                    <label for="accept-terms" class="checkbox__label">
-                        Al unirte a Edugestio, aceptas nuestros 
-                        <a href="/terminos-y-condiciones" class="login__legal-link" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a> y el 
-                        <a href="/aviso-de-privacidad" class="login__legal-link" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>.
-                    </label>
-                    <span id="legal-feedback" class="checkbox__feedback" aria-live="polite"></span>
-                </div>
+                <!-- enlace "Olvidaste tu contraseña" -->
+                <a href="/recuperar-contraseña" class="login__forgot-password" tabindex="0">
+                    ¿Olvidaste tu contraseña?
+                </a>
 
                 <!-- Átomo: botón -->
                 <button type="submit" class="button button__login">
-                    Crear cuenta
+                    Iniciar sesión
                 </button>
             </form>
 
-            <!-- Sección: Acceder -->
+            <!-- Sección: Registro -->
             <p class="login__register">
-                ¿Ya tienes una cuenta en Edugestio?
-                <a href="/registro" class="login__register-link" role="button" tabindex="0">
-                    Inicia sesión aquí.
+                ¿Aún no tienes una cuenta?
+                <a href="#" class="login__register-link register-toggle" role="button" tabindex="0">
+                    Regístrate aquí.
                 </a>
+            </p>
+
+            <!-- Sección: Avisos legales -->
+            <p class="login__legal">
+                Al iniciar sesión, aceptas nuestros 
+                <a href="/terminos-y-condiciones" class="login__legal-link">Términos y Condiciones</a> y el 
+                <a href="/aviso-de-privacidad" class="login__legal-link">Aviso de Privacidad</a>.
             </p>
         </section>
     </main>
 
     <!-- JavaScript -->
     <script src="../../../static/js/pages/login/login.js"></script>
-    <script src="../../../static/js/components/carousel/carousel.js"></script>
+    <script src="../../../static/js/components/carousel.js"></script>
 </body>
 </html>

@@ -20,9 +20,16 @@
     padding-left: 2.8rem;
     cursor: pointer;
     display: inline-block;
+    font-size: 1.1rem !important;
     color: var(--color-neutral-700);
     transition: color var(--transition-duration-medium)
         var(--transition-ease-default);
+
+    .login__legal-link {
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-decoration: underline;
+    }
 }
 
 .checkbox__label::before {
@@ -44,8 +51,8 @@
 .checkbox__label::after {
     content: "";
     position: absolute;
-    left: 0.5rem;
-    top: 0.75rem;
+    left: 0.6rem;
+    top: 0.5rem;
     width: 0.7rem;
     height: 1.2rem;
     border-right: 3px solid transparent;
@@ -84,12 +91,4 @@
     color: var(--color-primary-dark);
     outline: none;
     text-decoration: none;
-}
-
-.checkbox__feedback {
-    display: block;
-    margin-top: var(--spacing-xs);
-    font-size: 1.2rem;
-    color: var(--color-state-danger-text);
-    min-height: 1.4rem;
 }

@@ -4,7 +4,6 @@
 
 .input-field__wrapper {
     position: relative;
-
     width: 100%;
 }
 
@@ -21,6 +20,19 @@
     transition: border-color 0.2s ease;
 }
 
+/* --- SELECT --- */
+.input-field select.input-field__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41.59L6 5.17 10.59.59 12 2l-6 6-6-6z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-md) center;
+    background-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Label base */
 .input-field__label {
     position: absolute;
     top: 50%;
@@ -33,26 +45,29 @@
     font-size: 1.6rem;
     font-weight: bold;
 
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease, color 0.3s ease;
     transition: top 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
+/* Enfocar o cuando el select tenga valor */
 .input-field__input:focus + .input-field__label,
-.input-field__input:not(:placeholder-shown) + .input-field__label {
+.input-field__input:not(:placeholder-shown) + .input-field__label,
+.input-field__input.input-field__input--filled + .input-field__label,
+select.input-field__input:focus + .input-field__label,
+select.input-field__input.has-value + .input-field__label {
     top: 0;
-
     color: var(--color-primary-base);
-    
-    -webkit-transform: translateY(-50%) scale(0.85);
     transform: translateY(-50%) scale(0.85);
 }
 
+/* Borde focus */
 .input-field__input:focus {
     border-color: var(--color-primary-base);
 }
 
-.input-field__input:not(:focus):not(:placeholder-shown) + .input-field__label {
+/* Cuando pierde foco pero tiene valor */
+.input-field__input:not(:focus):not(:placeholder-shown) + .input-field__label,
+.input-field__input.input-field__input--filled:not(:focus) + .input-field__label,
+select.input-field__input.has-value:not(:focus) + .input-field__label {
     color: var(--color-neutral-400);
 }
