@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Edugestio40</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../../static/css/base.css">
+    <link rel="stylesheet" href="../../../static/css/pages/user/login2.css">
+    <link rel="stylesheet" href="../../../static/css/components/carousel2.css">
+    <link rel="stylesheet" href="../../../static/css/components/forms2.css">
+</head>
+<body class="auth">
+    <main class="auth__container">
+
+        <!-- Bloque 1: Carrusel de imágenes -->
+        <section class="carousel">
+            <div class="auth__logo" aria-label="Logo de Edugestio" role="img">
+                <img src="../../../static/media/pictures/svg/system-identity/edugestio40-white.svg" 
+                    alt="Logo a color que se forma de un birrete y la palabra Edugestio">
+            </div>
+
+            <div class="carousel__container" role="region" aria-roledescription="carrusel" aria-live="polite" tabindex="0">
+                <div class="carousel__track">
+                    
+                    <!-- Slide 1 a 5 -->
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 de 5">
+                        <img src="../../../static/media/pictures/images/login/image1.jpg" alt="Descripción para la imagen 1" class="carousel__image">
+                        <figcaption class="carousel__caption d-none">Texto descriptivo o leyenda para la imagen 1</figcaption>
+                    </figure>
+
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 de 5">
+                        <img src="../../../static/media/pictures/images/login/image2.jpg" alt="Descripción para la imagen 2" class="carousel__image">
+                        <figcaption class="carousel__caption d-none">Texto descriptivo o leyenda para la imagen 2</figcaption>
+                    </figure>
+
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 de 5">
+                        <img src="../../../static/media/pictures/images/login/image3.jpg" alt="Descripción para la imagen 3" class="carousel__image">
+                        <figcaption class="carousel__caption d-none">Texto descriptivo o leyenda para la imagen 3</figcaption>
+                    </figure>
+
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 de 5">
+                        <img src="../../../static/media/pictures/images/login/image4.jpg" alt="Descripción para la imagen 4" class="carousel__image">
+                        <figcaption class="carousel__caption d-none">Texto descriptivo o leyenda para la imagen 4</figcaption>
+                    </figure>
+
+                    <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 de 5">
+                        <img src="../../../static/media/pictures/images/login/image5.jpg" alt="Descripción para la imagen 5" class="carousel__image">
+                        <figcaption class="carousel__caption d-none">Texto descriptivo o leyenda para la imagen 5</figcaption>
+                    </figure>
+                </div>
+
+                <!-- Indicadores de slide -->
+                <div class="carousel__indicators" role="tablist" aria-label="Formulario de acceso"></div>
+            </div>
+        </section>
+
+        <!-- Bloque 2: Interacción del usuario -->
+        <section class="auth__forms">
+
+            <!-- Formulario para iniciar sesión (login) -->
+            <form class="form auth__form form--login" action="#" method="post" aria-labelledby="form-login" novalidate>
+                <header class="form__header">
+                    <div class="form__logo" aria-label="Logo de Edugestio" role="img">
+                        <img src="../../../static/media/pictures/svg/system-identity/edugestio40-light.svg" 
+                            alt="Logo a color que se forma de un birrete y la palabra Edugestio">
+                    </div>
+
+                    <h1 id="form-login" class="form__title">
+                        Bienvenido a Edugestio
+                    </h1>
+
+                    <p class="form__description">
+                        Todo lo que necesitas para organizar tu vida académica en un solo lugar. 
+                        Inicia sesión para continuar aprendiendo, creciendo y cumpliendo tus metas.
+                    </p>
+                </header>
+
+                <!-- Molécula: formulario -->
+                <div class="form__body">
+
+                    <!-- Átomo: campo de texto -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="text" id="username" name="username" class="input-field__input" required autocomplete="username" placeholder=" " aria-describedby="username-feedback">
+                            <label for="username" class="input-field__label">Usuario</label>
+                        </div>
+                        <span id="username-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: campo de contraseña -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="password" id="password" name="password" class="input-field__input" required autocomplete="current-password" placeholder=" " aria-describedby="password-feedback">
+                            <label for="password" class="input-field__label">Contraseña</label>
+                        </div>
+                        <span id="password-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>                    
+
+                    <!-- Enlace "Olvidaste tu contraseña" -->
+                    <a href="#" type="button" class="auth__form-toggle" data-target="forgot">¿Olvidaste tu contraseña?</a>
+
+                    <!-- Átomo: botón -->
+                    <button type="submit" class="button button__login">
+                        Iniciar sesión
+                    </button>
+                </div>
+                
+                <footer class="form__footer">
+                    <a href="#" type="button" class="auth__form-toggle" data-target="register">
+                        ¿Aún no tienes una cuenta? 
+                        <span>Regístrate aquí.</span>
+                    </a>
+
+                    <p class="form__legal">
+                        Al iniciar sesión, aceptas nuestros <a href="#" class="legal__link">Términos y Condiciones</a>
+                        y el <a href="#" class="legal__link">Aviso de Privacidad</a>
+                    </p>
+                </footer>    
+            </form>
+
+            <!-- Formulario para crear una cuenta (register) -->
+            <form class="form auth__form form--register" action="#" method="post" aria-labelledby="form-register" novalidate>
+                <header class="form__header">
+                    <div class="form__logo" aria-label="Logo de Edugestio" role="img">
+                        <img src="../../../static/media/pictures/svg/system-identity/edugestio40-light.svg" 
+                            alt="Logo a color que se forma de un birrete y la palabra Edugestio">
+                    </div>
+
+                    <h1 id="form-register" class="form__title">
+                        Únete a Edugestio
+                    </h1>
+
+                    <p class="form__description">
+
+                    </p>
+                </header>
+
+                <div class="form__body">
+
+                    <!-- Átomo: campo nombre de usuario -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="text" id="username" name="username" class="input-field__input" required autocomplete="username" placeholder=" " aria-describedby="username-feedback">
+                            <label for="username" class="input-field__label">Usuario</label>
+                        </div>
+                        <span id="username-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>    
+                    
+                    <!-- Átomo: Átomo: selector tipo de usuario (cambia input por select) -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <select id="user-type" name="user-type" class="input-field__input" required aria-describedby="user-type-feedback">
+                                <option value="" disabled selected>Selecciona</option>
+                                <option value="estudiante">Estudiante</option>
+                                <option value="profesor">Profesor</option>
+                                <option value="administrativo">Administrativo</option>
+                            </select>
+                            <label for="user-type" class="input-field__label">Tipo de usuario</label>
+                        </div>
+                        <span id="user-type-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: campo CURP -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="text" id="curp" name="curp" class="input-field__input" required autocomplete="off" placeholder=" " aria-describedby="curp-feedback">
+                            <label for="curp" class="input-field__label">CURP</label>
+                        </div>
+                        <span id="curp-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: campo correo electrónico -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="email" id="email" name="email" class="input-field__input" required autocomplete="email" placeholder=" " aria-describedby="email-feedback">
+                            <label for="email" class="input-field__label">Correo electrónico</label>
+                        </div>
+                        <span id="email-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: campo contraseña -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="password" id="password" name="password" class="input-field__input" required autocomplete="new-password" placeholder=" " aria-describedby="password-feedback">
+                            <label for="password" class="input-field__label">Contraseña</label>
+                        </div>
+                        <span id="password-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: campo repetir contraseña -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="password" id="password-repeat" name="password-repeat" class="input-field__input" required autocomplete="new-password" placeholder=" " aria-describedby="password-repeat-feedback">
+                            <label for="password-repeat" class="input-field__label">Repetir</label>
+                        </div>
+                        <span id="password-repeat-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Atomo: Avisos legales -->
+                    <div class="checkbox">
+                        <input type="checkbox" id="accept-terms" name="accept-terms" class="checkbox__input" required aria-describedby="legal-feedback">
+                        <label for="accept-terms" class="checkbox__label">
+                            Al unirte a Edugestio, aceptas nuestros 
+                            <a href="/terminos-y-condiciones" class="login__legal-link" target="_blank" rel="noopener noreferrer">Términos y Condiciones</a> y el 
+                            <a href="/aviso-de-privacidad" class="login__legal-link" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a>.
+                        </label>
+                        <span id="legal-feedback" class="checkbox__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: botón -->
+                    <button type="submit" class="button button__login">
+                        Crear cuenta
+                    </button>
+                </div>
+                
+                <footer class="form__footer">
+                    <a href="#" type="button" class="auth__form-toggle" data-target="login">
+                        ¿Ya tienes una cuenta? 
+                        <span>Inicia sesión aquí.</span>
+                    </a>
+                </footer>
+            </form>
+
+            <!-- Formulario para recuperar la cuenta (forgot) -->
+            <form class="form auth__form form--forgot" action="#" method="post" aria-labelledby="form-forgot" novalidate>
+                <header class="form__header">
+                    <div class="form__logo" aria-label="Logo de Edugestio" role="img">
+                        <img src="../../../static/media/pictures/svg/system-identity/edugestio40-light.svg" 
+                            alt="Logo a color que se forma de un birrete y la palabra Edugestio">
+                    </div>
+
+                    <h1 id="form-forgot" class="form__title">
+                        Recupera tu cuenta
+                    </h1>
+
+                    <p class="form__description">
+                        Ingresa tu CURP y correo electrónico registrado y te enviaremos un enlace para restablecer tu contraseña 
+                        de forma segura. 
+                        Revisa tu bandeja de entrada y sigue las instrucciones para recuperar el acceso a tu cuenta.
+                    </p>
+                </header>
+
+                <div class="form__body">
+
+                    <!-- Átomo: campo nombre de usuario -->
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="text" id="curp" name="curp" class="input-field__input" required autocomplete="off" placeholder=" " aria-describedby="curp-feedback">
+                            <label for="curp" class="input-field__label">CURP</label>
+                        </div>
+                        <span id="curp-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-field">
+                        <div class="input-field__wrapper">
+                            <input type="email" id="email" name="email" class="input-field__input" required autocomplete="email" placeholder=" " aria-describedby="email-feedback">
+                            <label for="email" class="input-field__label">Correo electrónico</label>
+                        </div>
+                        <span id="email-feedback" class="input-field__feedback" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Átomo: botón -->
+                    <button type="submit" class="button button__login">
+                        Recuperar cuenta
+                    </button>
+                </div>
+                
+                <footer class="form__footer">
+                    <a href="#" type="button" class="auth__form-toggle" data-target="login">
+                        ¿Ya tienes una cuenta? 
+                        <span>Inicia sesión aquí.</span>
+                    </a>
+
+                    <p class="form__legal">
+                        Al recuperar tu cuenta, aceptas nuestros <a href="#" class="legal__link">Términos y Condiciones</a>
+                        y el <a href="#" class="legal__link">Aviso de Privacidad</a>
+                    </p>
+                </footer>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const forms = document.querySelectorAll(".auth__form");
+            const toggleButtons = document.querySelectorAll(".auth__form-toggle");
+
+            function showForm(target) {
+                forms.forEach(form => {
+                    if (form.classList.contains(`form--${target}`)) {
+                        form.classList.add("is-active");
+                    } else {
+                        form.classList.remove("is-active");
+                    }
+                });
+            }
+
+            toggleButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const target = button.getAttribute("data-target");
+                    if (target) {
+                        showForm(target);
+                    }
+                });
+            });
+
+            // Mostrar login al iniciar
+            showForm("login");
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.querySelector(".carousel");
+            const track = carousel.querySelector(".carousel__track");
+            const slides = Array.from(track.children);
+            const indicatorsContainer = carousel.querySelector(".carousel__indicators");
+
+            let currentIndex = 0;
+
+            // Crear indicadores dinámicos
+            indicatorsContainer.innerHTML = "";
+            slides.forEach((_, index) => {
+                const button = document.createElement("button");
+                button.classList.add("carousel__indicator");
+                if (index === 0) button.classList.add("carousel__indicator--active");
+                button.setAttribute("role", "tab");
+                button.setAttribute("aria-selected", index === 0 ? "true" : "false");
+                button.setAttribute("aria-controls", `slide${index + 1}`);
+                button.id = `indicator${index + 1}`;
+                button.tabIndex = index === 0 ? 0 : -1;
+
+                button.addEventListener("click", () => goToSlide(index));
+
+                indicatorsContainer.appendChild(button);
+            });
+
+            // Función para ir a un slide específico
+            function goToSlide(index) {
+                currentIndex = index;
+                const offset = -index * carousel.offsetWidth;
+                track.style.transform = `translateX(${offset}px)`;
+
+                // Actualizar indicadores
+                const buttons = indicatorsContainer.querySelectorAll("button");
+                buttons.forEach((btn, i) => {
+                    btn.classList.toggle("carousel__indicator--active", i === index);
+                    btn.setAttribute("aria-selected", i === index ? "true" : "false");
+                    btn.tabIndex = i === index ? 0 : -1;
+                });
+            }
+
+            goToSlide(0);
+
+            // Manejo del swipe táctil
+            let startX = 0;
+            let isSwiping = false;
+
+            carousel.addEventListener("touchstart", (e) => {
+                startX = e.touches[0].clientX;
+                isSwiping = true;
+            });
+
+            carousel.addEventListener("touchend", (e) => {
+                if (!isSwiping) return;
+                isSwiping = false;
+                const endX = e.changedTouches[0].clientX;
+                const diffX = endX - startX;
+                const threshold = 40; // px para detectar swipe
+
+                if (diffX > threshold) {
+                    // Swipe derecha -> slide anterior
+                    goToSlide((currentIndex - 1 + slides.length) % slides.length);
+                } else if (diffX < -threshold) {
+                    // Swipe izquierda -> slide siguiente
+                    goToSlide((currentIndex + 1) % slides.length);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

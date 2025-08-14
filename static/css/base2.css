@@ -1,0 +1,26 @@
+/* 🎞️ ANIMATIONS */
+@import url('./animations/animations.css');
+@import url('./animations/keyframes.css');
+@import url('./animations/transitions.css');
+
+
+/* 🧱 BASE */
+@import url('./base/fonts.css');
+@import url('./base/normalize.css');
+@import url('./base/typography.css');
+@import url('./base/utilities.css');
+@import url('./base/variables.css');
+
+
+/* 📐 LAYOUT */
+@import url('./layout/aside.css');
+@import url('./layout/container.css');
+@import url('./layout/footer.css');
+@import url('./layout/grid.css');
+@import url('./layout/header.css');
+@import url('./layout/main.css');
+@import url('./layout/navigations.css');
+
+
+/* 📚 LIBRARIES */
+@import url('../libs/font-awesome-7/css/all.min.css');

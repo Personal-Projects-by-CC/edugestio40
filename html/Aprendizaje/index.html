@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="auth">
+            <!-- Bloque 1 -->
+            <div class="carousel">
+
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="auth__forms">
+                <form class="form auth__form form--login" action="#" method="post" novalidate aria-labelledby="form-login">
+                    <header class="form__header">
+                        <div class="form__logo">
+                            <img src="" alt="">
+                        </div>
+
+                        <h1 id="form-login" class="form__title">
+                            Login
+                        </h1>
+
+                        <p class="form__description">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam in, sed veritatis, voluptas dolor illum qui fugiat quis quo 
+                            ipsa repellat autem magni soluta voluptates dolores labore 
+                            voluptatibus accusantium nisi.
+                        </p>
+                    </header>
+
+                    <div class="form__body">
+                        <div class="input-field">Usuario</div>
+                        <div class="input-field">Contraseña</div>
+                        <button type="button" class="button auth__form-toggle" data-target="forgot">¿Olvidaste tu contraseña?</button>
+                        <button type="submit" class="button button__auth">Iniciar sesión</button>
+                    </div>
+                    
+                    <footer class="form__footer">
+                        <button type="button" class="button auth__form-toggle" data-target="register">¿Aún no tienes una cuenta? Regístrate aquí.</button>
+
+                        <p class="form__legal">
+                            Al iniciar sesión, aceptas nuestros 
+                            <a href="/terminos-y-condiciones" class="legal__link">Términos y Condiciones</a> y el 
+                            <a href="/aviso-de-privacidad" class="legal__link">Aviso de Privacidad</a>.
+                        </p>
+                    </footer>
+                </form>
+
+                <form class="form auth__form form--register" action="" method="post" novalidate aria-labelledby="form-register">
+                    <header class="form__header">
+                        <div class="form__logo">
+                            <img src="" alt="">
+                        </div>
+
+                        <h1 id="form-register" class="form__title">
+                            Register
+                        </h1>
+
+                        <p class="form__description">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam in, sed veritatis, voluptas dolor illum qui fugiat quis quo 
+                            ipsa repellat autem magni soluta voluptates dolores labore 
+                            voluptatibus accusantium nisi.
+                        </p>
+                    </header>
+
+                    <div class="form__body">
+                        <div class="input-field">Nombre de usuario</div>
+                        <div class="input-field">Tipo de usuario</div>
+                        <div class="input-field">CURP</div>
+                        <div class="input-field">Correo electronico</div>
+                        <div class="input-field">Contraseña</div>
+                        <div class="input-field">Repetir contraseña</div>
+                        <p class="form__legal">
+                            Al registrarte, aceptas nuestros 
+                            <a href="/terminos-y-condiciones" class="legal__link">Términos y Condiciones</a> y el 
+                            <a href="/aviso-de-privacidad" class="legal__link">Aviso de Privacidad</a>.
+                        </p>
+                        <button type="submit" class="button button__auth">Registrarte</button>
+                    </div>
+
+                    <footer class="form__footer">
+                        <button type="button" class="button auth__form-toggle" data-target="login">¿Ya tienes una cuenta? Inicia sesión aquí.</button>
+                    </footer>
+                </form>
+
+                <form class="form auth__form form--forgot" action="" method="post" novalidate aria-labelledby="form-forgot">
+                    <header class="form__header">
+                        <div class="form__logo">
+                            <img src="" alt="">
+                        </div>
+
+                        <h1 id="form-forgot" class="form__title">
+                            Forgot
+                        </h1>
+
+                        <p class="form__description">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Totam in, sed veritatis, voluptas dolor illum qui fugiat quis quo 
+                            ipsa repellat autem magni soluta voluptates dolores labore 
+                            voluptatibus accusantium nisi.
+                        </p>
+                    </header>
+
+                    <div class="form__body">
+                        <div class="input-field">CURP</div>
+                        <div class="input-field">Correo electronico</div>
+                        <button type="submit" class="button button__auth">Recuperar contraseña</button>
+                    </div>
+
+                    <footer class="form__footer">
+                        <button type="button" class="button auth__form-toggle" data-target="login">¿Ya tienes una cuenta? Inicia sesión aquí.</button>
+
+                        <p class="form__legal">
+                            Al recuperar tu cuenta, aceptas nuestros 
+                            <a href="/terminos-y-condiciones" class="legal__link">Términos y Condiciones</a> y el 
+                            <a href="/aviso-de-privacidad" class="legal__link">Aviso de Privacidad</a>.
+                        </p>
+                    </footer>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const forms = document.querySelectorAll(".auth__form");
+            const toggleButtons = document.querySelectorAll(".auth__form-toggle");
+
+            function showForm(target) {
+                forms.forEach(form => {
+                    form.style.display = form.classList.contains(`form--${target}`) ? "flex" : "none";
+                });
+            }
+
+            toggleButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const target = button.getAttribute("data-target");
+                    if (target) {
+                        showForm(target);
+                    }
+                });
+            });
+
+            // Mostrar el login al iniciar
+            showForm("login");
+        });
+    </script>
+</body>
+</html>

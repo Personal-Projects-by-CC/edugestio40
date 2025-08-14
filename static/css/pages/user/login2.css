@@ -1,0 +1,97 @@
+.auth {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    @media (width >= 768px) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .auth__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-md);
+
+        width: 100%;
+        max-width: 48rem;
+        height: 100svh;
+        padding: var(--spacing-md);
+        border-radius: var(--radius-xlarge);
+
+        background-color: var(--color-background-default);
+
+        @media (width >= 768px) {
+            max-height: 68rem;
+        }
+
+        @media (width >= 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 100rem;
+            height: 64rem;
+
+            .auth__forms {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .carousel {
+            position: relative;
+
+            flex-grow: 1;
+            display: none;
+            justify-content: center;
+
+            min-height: 8rem;
+
+            .auth__logo {
+                position: absolute;
+                top: 2rem;
+                z-index: var(--z-index-base);
+
+                img {
+                    width: 16rem;
+
+                    @media (width >= 768px) {
+                        width: 18rem;
+                    }
+
+                    @media (width >= 1024px) {
+                        width: 16rem;
+                    }
+                }
+            }
+
+            @media (width >= 1024px) {
+                display: flex;
+            }
+        }
+
+        .auth__forms {
+            position: relative;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+            padding: var(--spacing-md);
+
+            border: 2px solid var(--color-primary-dark);
+            border-radius: var(--spacing-md);
+
+            @media (width >= 1024px) {
+                height: auto;
+                padding-inline: var(--spacing-xl);
+
+                border-color: transparent;
+            }
+        }
+    }
+}
